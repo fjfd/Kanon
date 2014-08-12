@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 /**
- * Created by xuqi.xq on 2014/8/12.
+ * Created by xuqi86@gmail.com on 2014/8/12.
  */
 public interface ReportRepository extends MongoRepository<Report,String> {
 

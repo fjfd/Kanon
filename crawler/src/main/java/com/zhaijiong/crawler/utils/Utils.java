@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by xuqi.xq on 2014/8/12.
+ * Created by xuqi86@gmail.com on 2014/8/12.
  */
 public class Utils {
     private static final Logger LOG = LoggerFactory.getLogger(Utils.class);

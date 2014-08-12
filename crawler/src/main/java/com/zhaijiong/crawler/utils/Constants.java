@@ -1,7 +1,7 @@
 package com.zhaijiong.crawler.utils;
 
 /**
- * Created by xuqi.xq on 2014/8/10.
+ * Created by xuqi86@gmail.com on 2014/8/10.
  */
 public class Constants {
     public static final String ALGORITHM = "MD5";

@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * Created by xuqi.xq on 2014/8/11.
+ * Created by xuqi86@gmail.com on 2014/8/11.
  */
 public class ReportTemplate {
     private final Report report;
