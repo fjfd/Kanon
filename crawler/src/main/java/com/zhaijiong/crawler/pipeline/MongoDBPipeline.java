@@ -30,7 +30,9 @@ public class MongoDBPipeline implements Pipeline {
         try {
             Report report = new Report();
             Utils.transMap2Bean(all, report);
-            repository.save(report);
+            if(report.getUrl()!=null&&report.getUrl().length()!=0){
+                repository.save(report);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
