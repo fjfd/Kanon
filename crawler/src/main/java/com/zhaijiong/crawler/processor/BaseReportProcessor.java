@@ -26,7 +26,6 @@ public class BaseReportProcessor implements PageProcessor {
             page.addTargetRequests(page.getHtml().links().regex(report.getListPageUrlRule()).all());
             page.addTargetRequests(page.getHtml().links().regex(report.getPostPageUrlRule()).all());
         }else{
-            //
             String url = page.getUrl().regex(report.getPostPageUrlRule()).toString();
             page.putField("id", Hashing.md5().hashBytes(page.getUrl().toString().getBytes()).toString());
             page.putField("url", url);
