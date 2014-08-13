@@ -1,6 +1,7 @@
 package com.zhaijiong.crawler.pipeline;
 
 import com.zhaijiong.crawler.dao.Report;
+import com.zhaijiong.crawler.repository.index.ReportIndexRepository;
 import com.zhaijiong.crawler.repository.ReportRepository;
 import com.zhaijiong.crawler.utils.Utils;
 import org.slf4j.Logger;
@@ -24,6 +25,9 @@ public class MongoDBPipeline implements Pipeline {
     @Autowired
     private ReportRepository repository;
 
+    @Autowired
+    private ReportIndexRepository indexRepository;
+
     @Override
     public void process(ResultItems resultItems, Task task) {
         Map<String, Object> all = resultItems.getAll();
@@ -32,9 +36,10 @@ public class MongoDBPipeline implements Pipeline {
             Utils.transMap2Bean(all, report);
             if(report.getUrl()!=null&&report.getUrl().length()!=0){
                 repository.save(report);
+                indexRepository.save(report);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LOG.error("process failed.",e);
         }
     }
 
@@ -46,4 +51,11 @@ public class MongoDBPipeline implements Pipeline {
         this.repository = repository;
     }
 
+    public ReportIndexRepository getIndexRepository() {
+        return indexRepository;
+    }
+
+    public void setIndexRepository(ReportIndexRepository indexRepository) {
+        this.indexRepository = indexRepository;
+    }
 }

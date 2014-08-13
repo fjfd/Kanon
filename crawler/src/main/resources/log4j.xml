@@ -3,7 +3,7 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
     <root>
-        <level value="info" />
+        <level value="INFO" />
         <appender-ref ref="console" />
     </root>
 

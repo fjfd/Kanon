@@ -2,11 +2,14 @@
 package com.zhaijiong.crawler.dao;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 /**
  * Created by xuqi86@gmail.com
  * report代表一份研报实体对象
  */
+
+@Document(indexName = "report",type = "report")
 public class Report {
 
     /*
@@ -41,7 +44,7 @@ public class Report {
     private String attachment;
 
     /*
-     * type代表研报的类型ID，包括：宏观经济/投资策略/行业分析/公司调研
+     * type代表研报的类型ID，包括：宏观经济/投资策略/行业分析/公司调研/晨会早报
      */
     private String type;
 

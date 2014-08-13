@@ -1,7 +1,6 @@
 package com.zhaijiong.crawler.processor;
 
 import com.google.common.hash.Hashing;
-import com.zhaijiong.crawler.dao.Report;
 import com.zhaijiong.crawler.dao.ReportTemplate;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;

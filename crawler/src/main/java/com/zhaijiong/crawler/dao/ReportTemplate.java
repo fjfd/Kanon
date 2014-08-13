@@ -1,6 +1,5 @@
 package com.zhaijiong.crawler.dao;
 
-import com.google.common.base.Function;
 import com.google.common.collect.Maps;
 import com.google.common.io.Files;
 import com.zhaijiong.crawler.utils.Constants;

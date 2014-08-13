@@ -42,7 +42,7 @@ public class Main implements CommandLineRunner{
 
         QueueScheduler scheduler = new QueueScheduler();
 
-        JedisPool pool = new JedisPool("localhost",6379);
+        JedisPool pool = new JedisPool("zhaijiong.com",6379);
         scheduler.setDuplicateRemover(new RedisDuplicateRemover(template,pool,1000000));
 
         Spider.create(processor)
